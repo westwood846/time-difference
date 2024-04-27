@@ -6,6 +6,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
 import { useState } from "react";
 import moment, { Moment } from "moment";
+import "moment/locale/en-gb";
 
 export const Difference = () => {
   const [startDate, setStartDate] = useState<Moment | null>(moment());
@@ -14,7 +15,7 @@ export const Difference = () => {
   );
 
   return (
-    <LocalizationProvider dateAdapter={AdapterMoment}>
+    <LocalizationProvider dateAdapter={AdapterMoment} adapterLocale="en-gb">
       <Stack>
         <Stack direction={"row"} spacing={2} p={2}>
           <DatePicker
